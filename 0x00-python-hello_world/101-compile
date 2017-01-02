@@ -1,4 +1,5 @@
-#!/usr/bin/python3
-import py_compile
-print("Compiling main.py ...")
-py_compile.compile("main.py", "main.pyc")
+#!/bin/bash
+python3 -c 'import py_compile;
+import os;
+print("Compiling main.py ...");
+py_compile.compile(os.environ["PYFILE"], "main.pyc")'
