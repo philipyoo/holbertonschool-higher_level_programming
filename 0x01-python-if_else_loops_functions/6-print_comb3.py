@@ -4,4 +4,4 @@ for i in range(10):
         print(str(i) + str(j), end="")
         if int(str(i) + str(j)) < 89:
             print(", ", end="")
-print("");
+print("")
