@@ -1,3 +1,2 @@
 #!/bin/bash
-python3 -c 'import py_compile; import os; print("Compiling main.py ...");
-py_compile.compile(os.environ["PYFILE"], "main.pyc")'
+python3 -m py_compile $PYFILE; mv ./__pycache__/*.pyc "${PYFILE}c"
