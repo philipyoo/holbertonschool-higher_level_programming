@@ -11,8 +11,3 @@ def safe_print_list_integers(my_list=[], x=0):
     else:
         print("")
         return count
-
-"""
-        if not isinstance(my_list[i], int):
-            raise IndexError
-"""
