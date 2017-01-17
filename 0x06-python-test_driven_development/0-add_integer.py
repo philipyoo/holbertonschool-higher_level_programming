@@ -1,7 +1,8 @@
-"""This is the 0-add_integer module.
-This module supplies one function, add_integer(). For example,
->>> add_integer(10, 5)
-15
+"""
+This is the "Add Integer"  module.
+
+This module supplies one function, add_integer(),
+which adds together 2 int or float types and returns an int.
 """
 
 def add_integer(a, b):
