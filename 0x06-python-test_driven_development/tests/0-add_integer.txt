@@ -50,11 +50,22 @@ Now use it:
 	    ...
 	TypeError: b must be an integer
 
-Traceback (most recent call last):
-      File "/usr/lib/python3.4/doctest.py", line 1318, in __run
-        compileflags, 1), test.globs)
-      File "<doctest 0-add_integer.txt[4]>", line 1, in <module>
-        add_integer("17", 12)
-      File "/home/vagrant/holbertonschool-higher_level_programming/0x06-python-test_driven_development/0-add_integer.py", line 17, in add_integer
-        raise TypeError("{} must be an integer".format(y))
-    TypeError: a must be an integer
+	>>> add_integer("ace", "bay")
+	Traceback (most recent call last):
+	    ...
+	TypeError: a must be an integer
+
+	>>> add_integer([1], [2, 3])
+	Traceback (most recent call last):
+	    ...
+	TypeError: a must be an integer
+
+	>>> add_integer({}, 1.0)
+	Traceback (most recent call last):
+	    ...
+	TypeError: a must be an integer
+
+	>>> add_integer(2.5, lambda x: x)
+	Traceback (most recent call last):
+	    ...
+	TypeError: b must be an integer
