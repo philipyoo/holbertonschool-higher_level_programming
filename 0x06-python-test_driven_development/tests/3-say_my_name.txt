@@ -1,0 +1,38 @@
+The ``Say My Name`` module
+==========================
+
+Using ``say_my_name``
+---------------------
+
+This is a text file in reStructuredText format.
+First import ``say_my_name`` from the ``Say My Name`` module:
+
+    >>> smn = __import__("3-say_my_name").say_my_name
+
+Now use it:
+
+    >>> smn("John", "Smith")
+    My name is John Smith
+
+    >>> smn("Bob")
+    My name is Bob 
+
+    >>> smn("Bob", 12)
+    last_name must be a string
+
+    >>> smn("")
+    My name is  
+
+    >>> smn(1)
+    first_name must be a string
+
+    >>> smn(1, "Ross")
+    first_name must be a string
+
+    >>> smn()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+    >>> smn("Ace", "of Spades")
+    My name is Ace of Spades
