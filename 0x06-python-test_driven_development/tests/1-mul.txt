@@ -1,0 +1,76 @@
+The ``1-mul`` module
+====================
+
+Using ``mul``
+-------------
+
+This is an text file in reStructuredText format.
+First import ``mul`` from the ``1-mul`` module:
+
+    >>> mul = __import__("1-mul").mul
+
+Now use it:
+
+    >>> mul(0, 100)
+    0
+
+    >>> mul(-10, 2)
+    -20
+
+    >>> mul(2.0, 3.0)
+    6.0
+
+    >>> mul("a", 3)
+    'aaa'
+
+    >>> mul(3, "a")
+    'aaa'
+
+    >>> mul(-1.9, 4.56)
+    -8.664
+
+    >>> mul(238789278771771827, 213872981798964632)
+    51070575072543047531740376747022664
+
+    >>> mul(0, 0)
+    0
+
+    >>> mul(0.0, 0.0)
+    0.0
+
+    >>> mul(0.0, 0)
+    0.0
+
+    >>> mul(-25, -4)
+    100
+
+    >>> mul("a", "b")
+    Traceback (most recent call last):
+        ...
+    TypeError: can't multiply sequence by non-int of type 'str'
+
+    >>> mul([1], [2])
+    Traceback (most recent call last):
+        ...
+    TypeError: can't multiply sequence by non-int of type 'list'
+
+    >>> mul({}, {})
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'dict' and 'dict'
+
+    >>> mul(2, [4])
+    [4, 4]
+
+    >>> mul(5, [3])
+    [3, 3, 3, 3, 3]
+
+    >>> mul(3, {})
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'int' and 'dict'
+
+    >>> mul(3, lambda x: x)
+    Traceback (most recent call last):
+        ...
+    TypeError: unsupported operand type(s) for *: 'int' and 'function'
