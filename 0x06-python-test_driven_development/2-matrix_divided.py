@@ -22,6 +22,8 @@ def matrix_divided(matrix, div):
 
     if div is 0:
         raise ZeroDivisionError("division by zero")
+    if not isinstance(div, (int, float)):
+        raise TypeError("div must be a number")
 
     new_matrix = []
     for l in matrix:
