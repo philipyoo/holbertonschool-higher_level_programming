@@ -36,3 +36,14 @@ Now use it:
 
     >>> smn("Ace", "of Spades")
     My name is Ace of Spades
+
+    >>> smn(["Holberton", "School"], 10)
+    first_name must be a string
+
+    >>> smn("None", None)
+    last_name must be a string
+
+    >>> smn("League", "of", "Legends")
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
