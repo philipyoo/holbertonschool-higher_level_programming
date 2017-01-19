@@ -18,16 +18,22 @@ Now use it:
     My name is Bob 
 
     >>> smn("Bob", 12)
-    last_name must be a string
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
 
     >>> smn("")
     My name is  
 
     >>> smn(1)
-    first_name must be a string
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
 
     >>> smn(1, "Ross")
-    first_name must be a string
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
 
     >>> smn()
     Traceback (most recent call last):
@@ -38,10 +44,14 @@ Now use it:
     My name is Ace of Spades
 
     >>> smn(["Holberton", "School"], 10)
-    first_name must be a string
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
 
     >>> smn("None", None)
-    last_name must be a string
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
 
     >>> smn("League", "of", "Legends")
     Traceback (most recent call last):
