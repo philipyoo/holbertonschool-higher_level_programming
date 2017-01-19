@@ -5,6 +5,7 @@ This module supplies one function, add_integer(),
 which adds together 2 int or float types and returns an int.
 """
 
+
 def add_integer(a, b):
     """Return the sum of two integers or floats as an integer.
     Otherwise raise a TypeError for given incorrect argument type.
