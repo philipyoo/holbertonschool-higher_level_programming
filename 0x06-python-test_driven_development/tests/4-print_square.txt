@@ -1,0 +1,66 @@
+The ``Print Square`` module
+===========================
+
+Using ``print_square``
+----------------------
+
+This is a text file in reStructuredText format.
+First import ``print_square`` from the ``Print Square`` module:
+
+    >>> print_square = __import__("4-print_square").print_square
+
+Now use it:
+
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    >>> print_square(0)
+
+    >>> print_square(-1)
+    size must be >= 0
+
+    >>> print_square(5.5)
+    #####
+    #####
+    #####
+    #####
+    #####
+
+    >>> print_square(-2.3)
+    size must be an integer
+
+    >>> print_square([1, 2])
+    size must be an integer
+
+    >>> print_square({1})
+    size must be an integer
+
+    >>> print_square("4")
+    size must be an integer
+
+    >>> print_square(True)
+    size must be an integer
+
+    >>> print_square(False)
+    size must be an integer
+
+    >>> print_square((1, 2))
+    size must be an integer
+
+    >>> print_square({1})
+    size must be an integer
