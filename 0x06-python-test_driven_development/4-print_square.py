@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 This is the "Print Square" module.
 
