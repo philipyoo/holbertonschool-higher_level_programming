@@ -1,11 +1,11 @@
-The ``0-add_integer`` module
+The ``Add Integer`` module
 ============================
 
 Using ``add_integer``
 ---------------------
 
 This is an example text file in reStructuredText format. First
-``add_integer`` from the ``0-add_integer`` module:
+``add_integer`` from the ``Add Integer`` module:
 
 	>>> add_integer = __import__("0-add_integer").add_integer
 
