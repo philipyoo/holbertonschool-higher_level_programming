@@ -1,4 +1,18 @@
+#!/usr/bin/python3
+"""
+This is the "Matrix Divided" module.
+
+The Matrix Divided module takes in a list of lists matrix and divisor.
+All valid elements are divided by the divisor and returned as new matrix.
+"""
+
 def matrix_divided(matrix, div):
+    """Return a new matrix with all values divided by `div`.
+    Matrix must be a list of lists.
+    Each sub-list must contain only integers or floats.
+    Empty sub-lists are not allowed.
+    Divisor must be greater than 0 and must be an int or float.
+    """
     if not isinstance(matrix, list):
         raise TypeError("matrix must be a matrix (list of lists)" \
                         " of integers/floats")

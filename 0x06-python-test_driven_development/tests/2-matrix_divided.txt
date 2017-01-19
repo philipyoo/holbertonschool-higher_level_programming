@@ -1,11 +1,11 @@
-The ``2-matrix_divided`` module
+The ``Matrix Divided`` module
 =============================
 
 Using ``matrix_divided``
 ------------------------
 
 This is a text file in reStructuredText format.
-First ``matrix_divided`` from the ``matrix_divided`` module:
+First ``matrix_divided`` from the ``Matrix Divided`` module:
 
     >>> matrix_divided = __import__("2-matrix_divided").matrix_divided
 
