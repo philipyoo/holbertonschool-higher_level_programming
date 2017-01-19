@@ -11,11 +11,6 @@ def add_integer(a, b):
     """Return the sum of two integers or floats as an integer.
     Otherwise raise a TypeError for given incorrect argument type.
     """
-    if isinstance(a, bool):
-        raise TypeError("a must be an integer")
-    if isinstance(b, bool):
-        raise TypeError("b must be an integer")
-
     h = list(map(lambda x: isinstance(x, (int, float)), [a, b]))
 
     if all(h):

@@ -82,14 +82,10 @@ Now use it:
 	98
 
 	>>> add_integer(True, 2)
-	Traceback (most recent call last):
-	    ...
-	TypeError: a must be an integer
+	3
 
 	>>> add_integer(2, False)
-	Traceback (most recent call last):
-	    ...
-	TypeError: b must be an integer
+	2
 
 	>>> add_integer(None, 1)
 	Traceback (most recent call last):
