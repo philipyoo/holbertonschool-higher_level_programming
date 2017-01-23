@@ -1,6 +1,8 @@
 class Square:
     """A class that defines a square by size, which defaults 0.
+    Also defines position using a tuple, which defaults (0, 0).
     Square can also get area, and print square using '#'.
+    When printing, using position, offset on top and left.
     """
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
