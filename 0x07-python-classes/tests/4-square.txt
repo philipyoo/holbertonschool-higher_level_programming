@@ -1,0 +1,39 @@
+The ``4-square`` module
+====================
+
+Using ``Square`` class
+----------------------
+
+This is a text file in reStructuredText format.
+First import ``Square`` from the ``4-square`` module:
+
+    >>> Square = __import__("4-square").Square
+
+Now use it:
+
+    >>> s1 = Square(10)
+    >>> s1.__class__
+    <class '4-square.Square'>
+
+    >>> s1.size
+    10
+
+    >>> s1.size = "a"
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+    >>> s1.size = 12
+    >>> s1.size
+    12
+
+    >>> s1.area()
+    144
+
+    >>> s1.area(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: area() takes 1 positional argument but 2 were given
+
+    >>> s1.__dict__
+    {'_Square__size': 12}
