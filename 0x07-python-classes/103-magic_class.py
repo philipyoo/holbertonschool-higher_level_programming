@@ -20,12 +20,4 @@ class MagicClass:
     def circumference():
         return 2 * math.pi * self.__radius
 
-"""
-    @radius.setter
-    def radius(self, value):
-        if type(radius) is not int or type(radius) is not float:
-            raise TypeError("radius must be a number")
-        self.__radius = value
-"""
-
 dis.dis(MagicClass)
