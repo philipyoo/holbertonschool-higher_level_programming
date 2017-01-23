@@ -37,3 +37,11 @@ Now use it:
 
     >>> s1.__dict__
     {'_Square__size': 12}
+
+    >>> s1.size = -10
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+    >>> s1.size
+    12
