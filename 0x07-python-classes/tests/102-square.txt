@@ -1,0 +1,87 @@
+The ``102-square`` module
+====================
+
+Using ``Square`` class
+----------------------
+
+This is a text file in reStructuredText format.
+First import ``Square`` from the ``102-square`` module:
+
+    >>> Square = __import__("102-square").Square
+
+Now use it:
+
+    >>> s1 = Square(10)
+    >>> s1.__class__
+    <class '102-square.Square'>
+
+    >>> s1.size
+    10
+
+    >>> s1.size = "a"
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+    >>> s1.size = 12
+    >>> s1.size
+    12
+
+    >>> s1.area()
+    144
+
+    >>> s1.area(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: area() takes 1 positional argument but 2 were given
+
+    >>> s1.__dict__
+    {'_Square__size': 12}
+
+    >>> s1.size = -10
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+    >>> s1.size
+    12
+
+    >>> s2 = Square(5)
+    >>> s2.__class__
+    <class '102-square.Square'>
+
+    >>> print(s1 < s2)
+    False
+
+    >>> s1.size = 5
+    >>> print(s1 <= s2)
+    True
+
+    >>> print(s1 == s2)
+    True
+
+    >>> s1.size = 6
+    >>> print(s1 == s2)
+    False
+
+    >>> print(s1 != s2)
+    True
+
+    >>> s1.size = 5
+    >>> print(s1 != s2)
+    False
+
+    >>> print(s1 > s2)
+    False
+
+    >>> s2.size = 10
+    >>> print(s1 > s2)
+    False
+
+    >>> s1.size = 10
+    >>> print(s1 >= s2)
+    True
+
+    >>> s2.size = 11
+    >>> print(s1 >= s2)
+    False
