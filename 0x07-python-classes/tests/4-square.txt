@@ -74,3 +74,19 @@ Now use it:
     >>> print(s2._Square__size)
     3
 
+    >>> x = Square()
+    >>> def test_init_bad2(tests):
+    ...	    for test in tests:
+    ...	    	try:
+    ...		    x.size = test
+    ...	    	except Exception as e:
+    ...	    	    print("{}: {}".format(type(e).__name__, e))
+
+    >>> test_init_bad2(["hello", [1, 2], {}, ("a", 1), 23.456, set(), test_init_bad2])
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
