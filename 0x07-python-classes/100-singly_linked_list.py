@@ -14,9 +14,9 @@ the linked list sorted by the int value stored within.
 class Node:
     """A class that creates a single Node in a Linked List.
     """
-    def __init__(self, data, next=None):
+    def __init__(self, data, next_node=None):
         self.data = data
-        self.next = next
+        self.next_node = next_node
 
     @property
     def data(self):
@@ -29,14 +29,14 @@ class Node:
         self.__data = value
 
     @property
-    def next(self):
-        return self.__next
+    def next_node(self):
+        return self.__next_node
 
     @next.setter
-    def next(self, value):
+    def next_node(self, value):
         if not (value is None or type(value) is Node):
             raise TypeError("next must be a Node object")
-        self.__next = value
+        self.__next_node = value
 
 
 class SinglyLinkedList:
@@ -50,7 +50,7 @@ class SinglyLinkedList:
         total = ""
         while temp:
             total += "{:d}".format(temp.data)
-            temp = temp.next
+            temp = temp.next_node
             if temp:
                 total += "\n"
         return total
@@ -63,13 +63,11 @@ class SinglyLinkedList:
             prev = None
             while curr and value > curr.data:
                 prev = curr
-                curr = curr.next
+                curr = curr.next_node
             if curr is None:
-                prev.next = Node(value)
+                prev.next_node = Node(value)
             elif curr is self.__head and prev is None:
                 self.__head = Node(value, curr)
             else:
                 newNode = Node(value, curr)
-                prev.next = newNode
-
-#
+                prev.next_node = newNode
