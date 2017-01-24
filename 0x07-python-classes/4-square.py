@@ -12,7 +12,7 @@ Method area returns size of area of the square.
 class Square:
     """A class that defines a square by size and can compute area"""
     def __init__(self, size=0):
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
