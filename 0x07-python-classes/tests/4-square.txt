@@ -45,3 +45,32 @@ Now use it:
 
     >>> s1.size
     12
+
+    >>> def test_init_bad(tests):
+    ...     for test in tests:
+    ...    	try:
+    ...		    x = Square(test)
+    ...     	except Exception as e:
+    ...        	    print("{}: {}".format(type(e).__name__, e))
+    ...
+
+    >>> test_init_bad(["hello", [1, 2], {}, ("a", 1), 23.456, set(), test_init_bad])
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+    TypeError: size must be an integer
+
+    >>> s2 = Square()
+    >>> print(type(s2))
+    <class '4-square.Square'>
+
+    >>> print(s2.size)
+    0
+
+    >>> s2 = Square(3)
+    >>> print(s2._Square__size)
+    3
+
