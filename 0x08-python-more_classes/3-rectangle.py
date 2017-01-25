@@ -40,7 +40,7 @@ class Rectangle:
 
     def __str__(self):
         total = ""
-        if width is 0 or height is 0:
+        if width == 0 or height == 0:
             return total
         for i in range(self.__height):
             total += ("#" * self.__width)
