@@ -32,4 +32,4 @@ Now use it:
     >>> a.integer_validator("hai", -5)
     Traceback (most recent call last):
         ...
-    ValueError: name must be greater than 0
+    ValueError: hai must be greater than 0
