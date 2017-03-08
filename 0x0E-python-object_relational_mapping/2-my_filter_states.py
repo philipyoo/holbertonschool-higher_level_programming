@@ -10,7 +10,11 @@ db = MySQLdb.connect(user=sys.argv[1],
                      host='localhost',
                      port=3306)
 cur = db.cursor()
-cur.execute("SELECT id, name FROM states WHERE name='{}' ORDER BY id ASC".format(sys.argv[4]))
+cmd = """SELECT id, name
+         FROM states
+         WHERE name='{}'
+         ORDER BY id ASC""".format(sys.argv[4])
+cur.execute(cmd)
 nStates = cur.fetchall()
 
 for state in nStates:
