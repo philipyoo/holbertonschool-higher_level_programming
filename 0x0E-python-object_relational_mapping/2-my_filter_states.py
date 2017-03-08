@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+# List all states where 'name' matches the argument
+# Username, password, database name, and state name given as user args
+import sys
+import MySQLdb
+
+db = MySQLdb.connect(user=sys.argv[1],
+                     passwd=sys.argv[2],
+                     db=sys.argv[3],
+                     host='localhost',
+                     port=3306)
+cur = db.cursor()
+cur.execute("SELECT id, name FROM states WHERE name='{}' ORDER BY id ASC".format(sys.argv[4]))
+nStates = cur.fetchall()
+
+for state in nStates:
+    print(state)
+
+cur.close()
+db.close()
