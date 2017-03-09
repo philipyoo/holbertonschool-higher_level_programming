@@ -19,7 +19,8 @@ if __name__ == "__main__":
     nStates = cur.fetchall()
 
     for state in nStates:
-        print(state)
+        if (state[1] == sys.argv[4]):
+            print(state)
 
     cur.close()
     db.close()
