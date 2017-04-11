@@ -8,6 +8,4 @@ if __name__ == "__main__":
         content = res.read()
         print("\t- type: {}".format(type(content)))
         print("\t- content: {}".format(content))
-        checker = res.headers.get_content_charset()
-        if checker == "utf-8":
-            print("\t- utf8 content: OK")
+        print("\t- utf8 content: {}".format(content.decode('utf-8')))
