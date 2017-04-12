@@ -3,6 +3,7 @@
 Use requests package to make a get request to the swapi api.
 Use string argument as search value of request. Body response must
 be JSON and formatted to a Python dictionary.
+Display all character names, considering pagination on endpoint.
 """
 import sys
 import requests
