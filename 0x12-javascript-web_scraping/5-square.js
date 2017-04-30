@@ -1,8 +1,8 @@
 #!/usr/bin/node
 const Rectangle = require('./4-rectangle.js').Rectangle;
 
-module.exports = {
-  Square: function (size) {
-    Rectangle.call(this, size, size);
-  }
-};
+function Square (size) {
+  Rectangle.call(this, size, size);
+}
+
+module.exports = { Square };
