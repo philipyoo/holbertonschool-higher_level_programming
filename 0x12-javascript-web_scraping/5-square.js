@@ -23,4 +23,4 @@ function Square (size) {
   Rectangle.call(this, size, size);
 }
 
-module.exports = { Square };
+module.exports = { Square, Rectangle };
