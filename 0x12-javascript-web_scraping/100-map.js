@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const list = require('./100-data').list;
+let list = require('./100-data').list;
 
 console.log(list);
 
