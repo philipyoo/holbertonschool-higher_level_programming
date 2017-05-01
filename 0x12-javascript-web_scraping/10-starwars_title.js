@@ -1,5 +1,5 @@
 #!/usr/bin/node
-var request = require('request');
+const request = require('request');
 
 const episodeId = process.argv[2];
 

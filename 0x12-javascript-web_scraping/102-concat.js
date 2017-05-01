@@ -1,5 +1,5 @@
 #!/usr/bin/node
-var fs = require('fs');
+const fs = require('fs');
 
 let fileA = process.argv[2];
 let fileB = process.argv[3];
