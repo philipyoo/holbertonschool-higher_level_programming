@@ -8,6 +8,6 @@ request('http://swapi.co/api/films?format=json', (err, res, body) => {
 
   let data = JSON.parse(body).results;
   for (let i = 0; i < data.length; i++) {
-    $('ul#list_movies').append(data[i].title);
+    $('ul#list_movies').append('<li>' + data[i].title + '</li>');
   }
 });
